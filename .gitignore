@@ -1,0 +1,23 @@
+# Keys
+.env
+# Python
+.venv/
+__pycache__/
+# Fannie Mae files: their terms do not allow re-sharing. Everyone downloads them (step 1), or gets the prepared
+# files privately from the team (README, section 0). Only the empty folder marker is committed.
+data/*
+!data/.gitkeep
+# The pinned AWS sample is committed under vendor/ so a clone does not need to fetch it.
+# step 1 still clones that commit if vendor/ is missing.
+# Free wiring-test output
+results/dryrun*/
+# Senior review photos: slides are marked "Fannie Mae Confidential", never push them
+senior-review-*/
+# Case sets: Fannie Mae loan rows and the quarter zip may not be re-shared (test_cases.json and roles.csv are ours)
+data/*.zip
+case_sets/_loan_summary.csv
+case_sets/set*/sample.csv
+case_sets/set*/loans.duckdb
+case_sets/_verify_rows.pkl
+# run logs of the case-set scripts
+case_sets/*.log

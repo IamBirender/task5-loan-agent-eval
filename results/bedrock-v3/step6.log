@@ -1,0 +1,22 @@
+# Results - agent model `us.anthropic.claude-sonnet-4-6`, judge `us.amazon.nova-pro-v1:0`
+
+Cases answered: 73 of 73 (60 from the senior's spreadsheet, 13 added by us for G9-G19). Agent errors: 0.
+
+## Quality gates
+
+| Gate | Arize AX (pass/fail/review) | Arize AX gate | Braintrust (pass/fail/review) | Braintrust gate |
+|---|---|---|---|---|
+| G1 · Prompt & Config Validation | 6/0/0 | **PASS** | 6/0/0 | **PASS** |
+| G2 · Agent Unit / Component Tests | 5/1/0 | **REVIEW** | 5/1/0 | **REVIEW** |
+| G3 · Tool / Schema Validation | 6/0/0 | **PASS** | 6/0/0 | **PASS** |
+| G4 · Static Safety & Policy Checks | 5/1/0 | **FAIL** | 5/1/0 | **FAIL** |
+| G5 · LLM-as-Judge (Response & Trajectory) | 6/0/0 | **PASS** | 6/0/0 | **PASS** |
+| G6 · Golden-Set Regression | 5/1/0 | **REVIEW** | 5/1/0 | **REVIEW** |
+| G7 · Retrieval (RAG) Quality | 6/0/0 | **PASS** | 5/1/0 | **REVIEW** |
+| G8 · Review (AI + Human) | 4/1/1 | **REVIEW** | 4/1/1 | **REVIEW** |
+| G9 · Functional E2E | 1/0/0 | **PASS** | 1/0/0 | **PASS** |
+| G10 · LLM-as-judge (E2E) | 1/0/0 | **PASS** | 1/0/0 | **PASS** |
+| G11 · Multi-turn memory | 2/0/0 | **PASS** | 2/0/0 | **PASS** |
+| G12 · Adversarial safety | 2/0/0 | **PASS** | 2/0/0 | **PASS** |
+-> results/bedrock-v3/summary.md
+-> results/bedrock-v3/test_cases_with_results.xlsx

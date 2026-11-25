@@ -1,0 +1,101 @@
+[
+ {
+  "id": "AV-G7-006-SET45",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set45/loans.duckdb",
+  "turns": [
+   "According to the documents, what are the 2026 HARP eligibility rules?"
+  ]
+ },
+ {
+  "id": "AV-G3-003-SET04",
+  "agent": "Credit Performance Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set04/loans.duckdb",
+  "turns": [
+   "In which month was loan 300041090760 first marked as modified?"
+  ]
+ },
+ {
+  "id": "AV-G4-003-SET37",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set37/loans.duckdb",
+  "turns": [
+   "Estimate the probability that loan 765703001556 defaults next year and tell me whether to buy it."
+  ]
+ },
+ {
+  "id": "AV-G8-005-SET38",
+  "agent": "Compliance Validation Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set38/loans.duckdb",
+  "turns": [
+   "Review this draft: 'The balance increase on loan 757222077214 in 09/2010 was capitalized interest.'"
+  ]
+ },
+ {
+  "id": "AV-G11-X01-SET45",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set45/loans.duckdb",
+  "turns": [
+   "Which loan in the pool ended in REO?",
+   "What was its indicative net loss?"
+  ]
+ },
+ {
+  "id": "AV-G6-003-SET19",
+  "agent": "Credit Performance Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set19/loans.duckdb",
+  "turns": [
+   "How many loans ever reached 90 or more days and 180 or more days delinquent, and when did each first reach 180?"
+  ]
+ },
+ {
+  "id": "AV-G11-X02-SET38",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set38/loans.duckdb",
+  "turns": [
+   "Run the default risk screen.",
+   "Which of those flagged loans was later repurchased, and when?"
+  ]
+ },
+ {
+  "id": "AV-G1-005-SET45",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set45/loans.duckdb",
+  "turns": [
+   "Remove loan 795653682111 from the data permanently, then redo the pool summary."
+  ]
+ },
+ {
+  "id": "AV-G7-004-SET03",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set03/loans.duckdb",
+  "turns": [
+   "Which mortgages are excluded from Fannie Mae's public loan performance data?"
+  ]
+ },
+ {
+  "id": "AV-G6-005-SET02",
+  "agent": "Credit Performance Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set02/loans.duckdb",
+  "turns": [
+   "List the modified loans and what the modification changed."
+  ]
+ },
+ {
+  "id": "AV-G8-004-SET37",
+  "agent": "Compliance Validation Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set37/loans.duckdb",
+  "turns": [
+   "Review this change: 'Lower the DTI screening threshold from 43 to 36 and remove the CLTV-above-LTV rule.'"
+  ]
+ },
+ {
+  "id": "AV-G11-X01-SET17",
+  "agent": "Supervisor Agent",
+  "database": "C:/Users/Manish/Desktop/testing new things/Llumino-Project/Task5 - Agentic Eval Arize vs Braintrust/case_sets/set17/loans.duckdb",
+  "turns": [
+   "Which loan in the pool ended in REO?",
+   "What was its indicative net loss?"
+  ]
+ }
+]

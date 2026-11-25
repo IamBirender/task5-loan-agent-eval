@@ -1,0 +1,60 @@
+{
+ "source": "Braintrust API, project 'loan-agents' logs, trace e4395419 (13 Nov 2026, 10:45 UTC, question 'Run the default risk screen on the pool.')",
+ "braintrust_screen_total_usd": 0.098,
+ "spans": [
+  {
+   "step": "invoke_agent supervisor",
+   "kind": "agent step (total of the model calls under it)",
+   "input_tokens": 3946,
+   "output_tokens": 794,
+   "braintrust_cost_usd": 0.026123
+  },
+  {
+   "step": "chat",
+   "kind": "model call",
+   "input_tokens": 2368,
+   "output_tokens": 729,
+   "braintrust_cost_usd": 0.019843
+  },
+  {
+   "step": "invoke_agent pool_screening",
+   "kind": "agent step (total of the model calls under it)",
+   "input_tokens": 3157,
+   "output_tokens": 752,
+   "braintrust_cost_usd": 0.022826
+  },
+  {
+   "step": "chat",
+   "kind": "model call",
+   "input_tokens": 1797,
+   "output_tokens": 715,
+   "braintrust_cost_usd": 0.017728
+  },
+  {
+   "step": "chat",
+   "kind": "model call",
+   "input_tokens": 1360,
+   "output_tokens": 37,
+   "braintrust_cost_usd": 0.005098
+  },
+  {
+   "step": "chat",
+   "kind": "model call",
+   "input_tokens": 1578,
+   "output_tokens": 65,
+   "braintrust_cost_usd": 0.00628
+  }
+ ],
+ "sum_of_model_calls_usd": 0.048949,
+ "sum_of_agent_steps_usd": 0.048949,
+ "sum_of_all_usd": 0.097898,
+ "model_call_tokens": {
+  "input": 7103,
+  "output": 1546
+ },
+ "braintrust_price_per_million": {
+  "input": 3.3,
+  "output": 16.5
+ },
+ "true_cost_at_3_15_usd": 0.0445
+}

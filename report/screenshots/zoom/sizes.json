@@ -1,0 +1,38 @@
+{
+ "01-braintrust-preprod-compare": [
+  1305,
+  200
+ ],
+ "02-arize-preprod-step1-list": [
+  1141,
+  330
+ ],
+ "03-arize-preprod-step2-chart": [
+  1109,
+  345
+ ],
+ "04-arize-preprod-step3-compare": [
+  1146,
+  270
+ ],
+ "05-arize-cost-step1-price": [
+  980,
+  368
+ ],
+ "06-arize-cost-step2-run-cost": [
+  1136,
+  250
+ ],
+ "07-arize-cost-step3-step-cost": [
+  517,
+  290
+ ],
+ "08-braintrust-cost-per-step": [
+  926,
+  585
+ ],
+ "09-braintrust-counted-twice": [
+  1290,
+  473
+ ]
+}

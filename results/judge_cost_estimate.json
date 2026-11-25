@@ -1,0 +1,13 @@
+{
+ "what": "Estimated cost of the AI judge (Amazon Nova Pro) for one check of all 73 saved answers of the final run (results/bedrock-v3). No model was called to make this estimate.",
+ "how": "Each judge prompt was rebuilt from the saved answer and tool calls exactly as scoring/checks.py builds it; tokens = characters / 4. The reply length is estimated from the number of checklist items the judge returned (about 70 characters per item plus a short reason).",
+ "judge_model": "us.amazon.nova-pro-v1:0",
+ "price_per_million_tokens_usd": {"input": 0.80, "output": 3.20},
+ "answers_judged": 73,
+ "input_tokens_estimate": 124231,
+ "output_tokens_estimate": 11308,
+ "cost_one_full_check_usd": 0.136,
+ "cost_per_question_usd": 0.0019,
+ "cost_per_year_at_20_full_runs_a_month_usd": 33,
+ "note": "In our test the judge ran twice (once in the Arize step, once in the Braintrust step). With one tool chosen, it runs once per test run."
+}

@@ -1,0 +1,22 @@
+# Results - agent model `us.anthropic.claude-sonnet-4-6`, judge `us.amazon.nova-pro-v1:0`
+
+Cases answered: 60 of 60. Agent errors: 0.
+
+## Quality gates
+
+| Gate | Arize AX (pass/fail/review) | Arize AX gate | Braintrust (pass/fail/review) | Braintrust gate |
+|---|---|---|---|---|
+| G1 · Prompt & Config Validation | 6/0/0 | **PASS** | 6/0/0 | **PASS** |
+| G2 · Agent Unit / Component Tests | 3/3/0 | **FAIL** | 3/3/0 | **FAIL** |
+| G3 · Tool / Schema Validation | 2/4/0 | **FAIL** | 2/4/0 | **FAIL** |
+| G4 · Static Safety & Policy Checks | 4/2/0 | **FAIL** | 3/3/0 | **FAIL** |
+| G5 · LLM-as-Judge (Response & Trajectory) | 2/4/0 | **FAIL** | 0/6/0 | **FAIL** |
+| G6 · Golden-Set Regression | 5/1/0 | **REVIEW** | 5/1/0 | **REVIEW** |
+| G7 · Retrieval (RAG) Quality | 3/3/0 | **FAIL** | 3/3/0 | **FAIL** |
+| G8 · Review (AI + Human) | 2/3/1 | **FAIL** | 2/3/1 | **FAIL** |
+| G21 · Canary / Shadow Release | 4/2/0 | **REVIEW** | 4/2/0 | **REVIEW** |
+| G22 · Production Drift & Online Evaluation | 2/4/0 | **FAIL** | 2/4/0 | **FAIL** |
+
+Cases passed: Arize AX 33/60, Braintrust 30/60
+-> results/bedrock/summary.md
+-> results/bedrock/test_cases_with_results.xlsx

@@ -1,0 +1,5 @@
+agent model: bedrock / us.anthropic.claude-sonnet-4-6
+   reply: OK
+judge model: bedrock / us.amazon.nova-pro-v1:0
+   reply: OK.
+Both models answered. You can run the steps.

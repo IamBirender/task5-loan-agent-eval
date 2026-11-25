@@ -1,0 +1,32 @@
+TASK 5 - FINAL TEST CASES (public GitHub copy)
+
+This repository includes the code, the test cases, the results so far, and the agent library
+in vendor/sample-ma-due-diligence-agentcore (pinned AWS sample, commit 3d6191a).
+
+The prepared Fannie Mae loan files are not in this repository. Their terms do not allow
+publishing them. Build them with README.md section 0, step 2, before the real run:
+  data/loans.duckdb, data/kb_passages.json, and case_sets/set01 ... set50/loans.duckdb.
+
+  Experiment 1: 3,650 test cases = 50 case sets x 73 tests (case_sets/set01 ... set50), each with its own 8 loans
+                from Fannie Mae's 2007 Q4 data.
+  Experiment 2: 1,173 unique test cases from the senior (case_sets/senior_unique); the original 2,440 had 1,267 exact copies.
+
+QUICK REVIEW (no setup needed, just read):
+  README.md section 0 ............ how to run, time and cost
+  case_sets/README.md ............ how the case sets were made
+  case_sets/verification_report.md  independent check against the raw data: 0 problems in 9,026 checks
+  case_sets/sonnet_trial/README.md  Sonnet answered 24 random cases from the data: no answer-key error found
+  case_sets/all_case_sets_3650.json all of experiment 1 in one file
+
+RUN IT YOURSELF (Python 3.12):
+  python -m venv .venv  then activate it, then  pip install -r requirements.txt
+  copy .env.example to .env and fill in the model and the Arize AX / Braintrust keys (README section 0, step 1)
+  python case_sets/verify_cases.py data/2007Q4.zip   -> must end with "0 problems" (free; needs the quarter zip from README step 2)
+  python run_experiment.py 1 --dry      -> free wiring check, every step "ok"
+  python run_experiment.py 2 --dry
+  python check_models.py                -> "Both models answered"
+  python run_experiment.py 1 --sets set01   -> one real set first (about 30 minutes, about $3.50)
+  python run_experiment.py 1  and  python run_experiment.py 2   -> the full test
+
+INTERNAL USE ONLY: data/, case_sets/setNN/loans.duckdb and case_sets/_verify_rows.pkl hold Fannie Mae data.
+Fannie Mae's terms do not allow sharing them outside the team or publishing them (for example on GitHub).

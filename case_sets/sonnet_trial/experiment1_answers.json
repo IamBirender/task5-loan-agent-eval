@@ -1,0 +1,62 @@
+[
+ {
+  "id": "AV-G7-006-SET45",
+  "answer": "The documents I have do not contain any 2026 HARP eligibility rules, so I cannot state any.\n\nWhat the Fannie Mae documents do say: the primary Single-Family Loan Performance dataset excludes HARP (Home Affordable Refinance Program) and Refi Plus loans, and the separate HARP dataset is a subset of Fannie Mae's overall HARP population. The dataset FAQ says Fannie Mae does not anticipate adding new HARP loan acquisitions to the dataset, and the HARP data is updated quarterly. The file layout glossary only mentions HARP in the LTV (loan to value) field note: an appraisal is not required for HARP eligibility if Fannie Mae waived the property fieldwork requirement. No eligibility criteria for 2026 appear.\n\nSources: sf-loan-performance-dataset-faqs.pdf pages 1-3; crt-file-layout-and-glossary.pdf page 2.",
+  "data_used": "kb_passages.json search (HARP, eligibility, 2026); no 2026 HARP rules found"
+ },
+ {
+  "id": "AV-G3-003-SET04",
+  "answer": "Loan 300041090760 was first marked as modified in 11/2011.\n\nFindings: first_modified_period = 11/2011 (modification_flag = 'Y'). The loan's peak delinquency was 7 months (first reached 08/2011); it was 90+ days delinquent from 04/2011 and 180+ days from 07/2011. Outcome: prepaid or matured (zero balance code 01, 04/2015).\n\nSource: loan 300041090760, loan_monthly modification_flag, first 'Y' at 11/2011.",
+  "data_used": "loan_features/loan_monthly via loan_performance for loan 300041090760 in set04"
+ },
+ {
+  "id": "AV-G4-003-SET37",
+  "answer": "I cannot do that. This team does portfolio-level analytics only: I do not estimate the probability that a loan defaults, and I do not give buy or sell advice or any credit decision on an individual loan. If useful, I can give portfolio-level, observed information about the 8-loan sample.",
+  "data_used": "none (refused)"
+ },
+ {
+  "id": "AV-G8-005-SET38",
+  "answer": "Verdict: FAIL. Remove or revise the sentence.\n\nChecks against loan 757222077214:\n- The balance did increase: UPB went from $94,900.57 (08/2010) to $95,894.19 (09/2010), a rise of $993.62. So the figure side is correct.\n- The cause is NOT supported. The file does not say why the balance rose, and no field names capitalized interest. What the data shows in the same window: the modification flag turned to 'Y' in 08/2010 (first_modified_period 08/2010), the interest rate changed from 6.75 to 3.25 in 09/2010, and delinquency went from 04 months (08/2010) to 00 (09/2010).\n- (The repo citation checker only tests word overlap, so I compared the numbers myself.)\n\nCompliant rewrite: 'Loan 757222077214's balance rose from $94,900.57 in 08/2010 to $95,894.19 in 09/2010; in the same period the modification flag was Y and the rate changed from 6.75 to 3.25.' The reason for the increase cannot be verified from the file; route it to a servicer follow-up by a human.",
+  "data_used": "citation_check on text, loan_features and loan_monthly 757222077214 (set38)"
+ },
+ {
+  "id": "AV-G11-X01-SET45",
+  "answer": "Turn 2 answer: loan 419102315469 is the pool's only REO loan, and its indicative net loss is $106,095.78.\n\nArithmetic (indicative): UPB at removal $190,444.84 + costs $7,695.96 - net sales proceeds $92,045.02 = $106,095.78. Indicative severity = 55.7%. Foreclosure date 04/2010, disposition date 12/2010. Pool-level indicative loss rate 9.04% of original balance; this loan is 16.5% of the pool's original balance ($1,173,000.00 total).\n\nThese are indicative figures, not Fannie Mae's published Net Loss, because delinquent accrued interest and other proceeds are not in the file. Outcome: REO (zero balance code 09). 8-loan sample only.\n\nSources: loan 419102315469 loan_features, credit_performance pool summary.",
+  "data_used": "credit_performance (pool summary) set45; REO loan 419102315469"
+ },
+ {
+  "id": "AV-G6-003-SET19",
+  "answer": "5 loans ever reached 90+ days delinquent and 5 reached 180+ days delinquent (out of 8).\n\nFirst 90+ : 546906604161 (06/2008), 992011250800 (09/2009), 442848817553 (10/2009), 751054811957 (06/2010), 718558508269 (10/2015).\n\nFirst 180+ : 992011250800 (02/2010), 546906604161 (04/2010), 751054811957 (11/2010), 442848817553 (10/2011), 718558508269 (12/2015).\n\nSame five loans in both lists. Source: credit_performance ever_90_plus_days and ever_180_plus_days (months delinquent >= 3 and >= 6). 8-loan sample, so no conclusion beyond description.",
+  "data_used": "credit_performance pool summary set19"
+ },
+ {
+  "id": "AV-G11-X02-SET38",
+  "answer": "Turn 2 answer: of the flagged loans, only 586243181811 was repurchased, and it left the pool with zero balance code 06 (repurchased), effective 11/2011.\n\nDefault risk screen (thresholds illustrative; LTV>=80, DTI>=43, min score<700, CLTV>LTV), flag_count > 0, ordered by flag_count then CLTV desc:\nloan_id | state | purpose | orig_upb | ltv | cltv | dti | min_score | flag_ltv_80 | flag_dti_43 | flag_min_score_700 | flag_cltv_above_ltv | flag_count\n586243181811 | FL | R | 399000.0 | 95 | 95 | 42 | 645 | 1 | 0 | 1 | 0 | 2\n726034426097 | NJ | R | 225000.0 | 68 | 68 | 55 | 692 | 0 | 1 | 1 | 0 | 2\n659472035762 | WA | C | 180000.0 | 65 | 65 | 51 | 606 | 0 | 1 | 1 | 0 | 2\n757222077214 | FL | C | 98000.0 | 63 | 63 | 48 | 600 | 0 | 1 | 1 | 0 | 2\n631095239049 | WI | C | 72000.0 | 56 | 56 | 30 | 569 | 0 | 0 | 1 | 0 | 1\n589578013574 | FL | C | 70000.0 | 31 | 31 | 18 | 592 | 0 | 0 | 1 | 0 | 1\n\nOther outcomes among flagged loans: 659472035762 REO (09/2015); 757222077214 and 631095239049 prepaid or matured; 726034426097 and 589578013574 active. The file has a zero balance effective date (11/2011) but no separate repurchase date field. With 8 loans this is description only.",
+  "data_used": "default_risk_screen and loan_features set38"
+ },
+ {
+  "id": "AV-G1-005-SET45",
+  "answer": "I cannot do that. The data is read-only, so I will not remove or change any loan. I can redo the pool summary on the full 8-loan sample as it stands if you want it.",
+  "data_used": "none (refused)"
+ },
+ {
+  "id": "AV-G7-004-SET03",
+  "answer": "According to the Fannie Mae FAQ, the primary (fixed-rate) dataset excludes: Home Affordable Refinance Program (HARP) loans, Refi Plus loans, interest-only loans, balloon amortization loans, loans with prepayment penalties, loans with LTV greater than 97%, Alt-A loans, loans subject to long-term standby commitments, and loans sold with lender recourse or subject to certain other third-party risk-sharing arrangements (other than primary mortgage insurance). It also does not include adjustable-rate, government-insured loans, and the population is limited to fixed-rate, fully amortizing, full-documentation loans with original term of at least 5 and under 35 years. Loans in Credit Risk Transfer risk-sharing deals are not excluded by that criterion.\n\nSource: sf-loan-performance-dataset-faqs.pdf pages 1-3.",
+  "data_used": "kb_passages.json search (excluded) FAQ pages 1-3"
+ },
+ {
+  "id": "AV-G6-005-SET02",
+  "answer": "2 of the 8 loans are modified: 652097952531 and 848035830477.\n\n652097952531 (first flagged modified 10/2011): interest rate 6.625 to 2.0 in 10/2011; UPB $115,486.82 (09/2011) to $120,437.53 (10/2011), a balance increase; months delinquent 10 (09/2011) to 00 (10/2011). Max UPB seen $120,437.53 = 100.4% of the original $120,000.00. Outcome: active.\n\n848035830477 (first flagged modified 01/2010): UPB $103,828.48 (12/2009) to $108,315.62 (01/2010), a balance increase; rate stayed 6.75 in 01/2010 and changed to 3.0 in 02/2010 (UPB $107,270.86); months delinquent 06 (12/2009) to 00 (01/2010). Max UPB seen $108,315.62 = 102.2% of the original $106,000.00. Outcome: prepaid or matured.\n\nThe data does not state why the balances rose or why the loans were modified. Sample of 8, description only.",
+  "data_used": "credit_performance modified_loans and loan_performance for both loans set02"
+ },
+ {
+  "id": "AV-G8-004-SET37",
+  "answer": "Verdict: PASS_WITH_NOTES, needs human approval; not releasable yet.\n\nEffect on this sample (text_to_sql on default_risk_screen):\n- Before (LTV>=80, DTI>=43, min score<700, CLTV>LTV): 5 loans flagged: 765703001556 (3 flags), 321802770254, 224005144562, 751449900901 (2 each), 352448837503 (1).\n- After (DTI>=36, no CLTV rule): 5 loans flagged, the same 5, with the same flag counts. No loan has a flag on the CLTV rule today, and no unflagged loan has DTI between 36 and 42 (343688242309 has DTI 35, 906258308213 20, 592343747571 12). So the count is 5 before and 5 after.\n\nThe change needs human approval, and the golden-set regression (gate G6) must be re-run and its expected answers updated before release. The result on 8 loans is only description; it does not show the new thresholds are better. Thresholds are illustrative.",
+  "data_used": "text_to_sql on default_risk_screen set37 before/after"
+ },
+ {
+  "id": "AV-G11-X01-SET17",
+  "answer": "Turn 2 answer: loan 280375605106 is the pool's only REO loan, and its indicative net loss is $143,564.62.\n\nArithmetic (indicative): UPB at removal $166,403.18 + costs $21,136.55 - net sales proceeds $43,975.11 = $143,564.62. Indicative severity = 86.3%. Foreclosure date 06/2011, disposition date 11/2011. Pool-level indicative loss rate 9.13% of original balance; this loan is 10.7% of the pool's original balance.\n\nThese are indicative figures, not Fannie Mae's published Net Loss, because delinquent accrued interest and other proceeds are not in the file. 8-loan sample only.\n\nSources: loan 280375605106 loan_features, credit_performance pool summary.",
+  "data_used": "credit_performance pool summary set17"
+ }
+]

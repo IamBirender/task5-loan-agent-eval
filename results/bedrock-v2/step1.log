@@ -1,0 +1,3 @@
+ok       using the prepared data/loans.duckdb and data/kb_passages.json (prepared on your own computer)
+ok       vendor/sample-ma-due-diligence-agentcore @ 3d6191a
+ok       data/loans.duckdb  (8 loans, 757 monthly records, 61 source columns)
